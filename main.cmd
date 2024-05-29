@@ -1,6 +1,7 @@
 @echo off
-title GrubFM Installer
-echo GrubFM Installer by QuestYouCraft
+title G2FM Installer
+echo Welcome to the G2FM Installer!
+echo Original installer is by QuestYouCraft.
 for /f "tokens=2 delims=[]" %%i in ('ver') do (@for /f "tokens=2 delims=. " %%a in ("%%i") do set "n=%%a")
 if %n% LEQ 5 (
 echo Sorry, I can't work in Windows XP and lower...
@@ -11,11 +12,12 @@ wmic diskdrive get Index,Partitions,Model,Size,Caption
 echo WARNING! All data on the drive you select will be deleted!
 set /p IndexOfInstallDrive="Enter the INDEX of the disk on which the installation will be made: "
 (
-echo select disk %IndexOfInstallDrive%
+echo You have chosen drive %IndexOfInstallDrive%
+Set /P drivepath=If this is wrong disk, enter the correct drive index now: || Set IndexOfInstallDrive=%IndexOfInstallDrive%
 echo clean
 echo create partition primary size=24
 echo active
-echo format fs=fat quick label=GRUBFM
+echo format fs=fat quick label=G2FM
 echo assign
 echo active
 echo create partition primary
@@ -35,13 +37,13 @@ echo Extracting files...
 %cd%\7za.exe x -o%%b:\ -y %cd%\grubfm-bin.zip>nul
 ))
 color 27
-title GrubFM Installer: success
+title G2FM Installer: success
 echo OK!
 pause
 exit /b
 ) else (
 color 47
-title GrubFM Installer: error
+title G2FM Installer: error
 echo RUNTIME ERROR!
 pause
 exit /b
