@@ -1,4 +1,4 @@
-echo Created through GrubFM by QuestYouCraft
+echo ---Created with g2fm Installer---
 map --mem /grubfm.iso (0xff)
 map --hook
 chainloader (0xff)

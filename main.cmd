@@ -1,5 +1,6 @@
 @echo off
 title G2FM Installer
+color 1f
 echo Welcome to the G2FM Installer!
 echo Original installer is by QuestYouCraft.
 for /f "tokens=2 delims=[]" %%i in ('ver') do (@for /f "tokens=2 delims=. " %%a in ("%%i") do set "n=%%a")
@@ -37,7 +38,7 @@ echo Extracting files...
 %cd%\7za.exe x -o%%b:\ -y %cd%\grubfm-bin.zip>nul
 ))
 color 27
-title G2FM Installer: success
+title G2FM Installer: success!
 echo OK!
 pause
 exit /b
