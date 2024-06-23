@@ -17,6 +17,8 @@ Method A: Using the boot menu
 1. Press the key that your BIOS uses to open the boot menu. It is usually <kbd>F12</kbd>, and <kbd>ESC</kbd>. But in your case, the key may be different.
 2. Select the USB device you have installed G2FM to.
    __Enjoy! 🙂__  
+
+Method B: BIOS setup
 1. Enter to BIOS/UEFI   
 _Note: many manufacturers use <kbd>F2</kbd>/<kbd>Del</kbd>/ for the menu, but in your case, the key may be different._
 2. Set the __first__ priority for your device with G2FM
